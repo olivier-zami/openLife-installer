@@ -52,7 +52,7 @@ fi
 cd third_party
 if [ ! -e minorGems ]
 then
-  git clone https://github.com/twohoursonelife/minorGems.git
+  git submodule add https://github.com/twohoursonelife/minorGems.git
   cd minorGems
   git pull --tags
   cd ..

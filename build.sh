@@ -171,7 +171,7 @@ do
 done
 
 # use partial makefiles from minorGems project
-makefileMinorGems="$mgPath/build/Makefile.minorGems"
+makefileMinorGems="../../build/Makefile.minorGems"
 makefileMinorGemsTargets="$mgPath/build/Makefile.minorGems_targets"
 platformName="Generic"
 platformMakefile="generic"

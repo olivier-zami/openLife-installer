@@ -33,33 +33,34 @@ fi
 
 #clone sources
 cd data
-git clone https://github.com/twohoursonelife/OneLifeData7.git .
+#git clone https://github.com/twohoursonelife/OneLifeData7.git .
+git clone https://github.com/olivier-zami/OneLifeData7.git .
 git pull --tags
 rm */cache.fcz
 rm */bin_*cache.fcz
 cd ..
 
 cd src
-git clone https://github.com/twohoursonelife/OneLife.git .
+#git clone https://github.com/twohoursonelife/OneLife.git .
+git clone --recursive --branch refacto https://github.com/olivier-zami/OneLife.git .
 git pull --tags
 
 #clone minorGems and other third party library
-if [ ! -e third_party ]
-then
-  mkdir third_party
-fi
+#if [ ! -e third_party ]
+#then
+#  mkdir third_party
+#fi
 
-cd third_party
-if [ ! -e minorGems ]
-then
-  git submodule add https://github.com/twohoursonelife/minorGems.git
-  cd minorGems
-  git pull --tags
-  cd ..
-fi
-
-cd .. #third_party
-cd .. #src
+#cd third_party
+#if [ ! -e minorGems ]
+#then
+#  git submodule add https://github.com/twohoursonelife/minorGems.git
+#  cd minorGems
+#  git pull --tags
+#  cd ..
+#fi
+#cd .. #third_party
+#cd .. #src
 
 #
 cd src
@@ -218,4 +219,4 @@ git for-each-ref --sort=-creatordate --format '%(refname:short)' --count=1 refs/
 
 
 echo 0 > settings/requireTicketServerCheck.ini
-echo 1 > settings/forceEveLocation.ini 
+echo 1 > settings/forceEveLocation.ini

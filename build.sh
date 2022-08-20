@@ -48,6 +48,7 @@ git pull --tags
 cd third_party/openLife
 git pull
 cd ../..
+git submodule update --remote third_party/openLife
 #clone minorGems and other third party library
 #if [ ! -e third_party ]
 #then
